@@ -1,0 +1,78 @@
+{
+  "name": "@rollup/plugin-multi-entry",
+  "version": "6.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Use multiple entry points for a bundle",
+  "license": "MIT",
+  "repository": {
+    "url": "rollup/plugins",
+    "directory": "packages/multi-entry"
+  },
+  "author": "rollup",
+  "homepage": "https://github.com/rollup/plugins/tree/master/packages/multi-entry/#readme",
+  "bugs": "https://github.com/rollup/plugins/issues",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.js",
+  "exports": {
+    "types": "./types/index.d.ts",
+    "import": "./dist/es/index.js",
+    "default": "./dist/cjs/index.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "ci:coverage": "nyc pnpm test && nyc report --reporter=text-lcov > coverage.lcov",
+    "ci:lint": "pnpm build && pnpm lint",
+    "ci:lint:commits": "commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}",
+    "ci:test": "pnpm test -- --verbose",
+    "prebuild": "del-cli dist",
+    "prepare": "if [ ! -d 'dist' ]; then pnpm build; fi",
+    "prerelease": "pnpm build",
+    "pretest": "pnpm build",
+    "release": "pnpm --workspace-root plugin:release --pkg $npm_package_name",
+    "test": "ava"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.map",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "rollup",
+    "plugin",
+    "multi",
+    "multiple",
+    "entry",
+    "entries"
+  ],
+  "peerDependencies": {
+    "rollup": "^1.20.0||^2.0.0||^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "rollup": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@rollup/plugin-virtual": "^3.0.0",
+    "matched": "^5.0.1"
+  },
+  "devDependencies": {
+    "rollup": "^3.2.3"
+  },
+  "types": "./types/index.d.ts",
+  "ava": {
+    "files": [
+      "!**/fixtures/**",
+      "!**/helpers/**",
+      "!**/recipes/**",
+      "!**/types.ts"
+    ]
+  }
+}

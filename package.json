@@ -1,0 +1,29 @@
+{
+  "name": "@cohe/web-components",
+  "version": "1.0.0",
+  "description": "A library of web components",
+  "main": "dist/index.ts",
+  "type": "module",
+  "author": {
+    "name": "Felipe Correia"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "dependencies": {
+    "@rollup/plugin-multi-entry": "^6.0.0",
+    "lit-element": "^3.2.2",
+    "sass": "^1.57.1",
+    "tslib": "^2.4.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "rollup": "^3.10.1",
+    "rollup-plugin-sass": "^1.12.17",
+    "rollup-plugin-terser": "^7.0.0",
+    "typescript": "^4.9.4"
+  }
+}
