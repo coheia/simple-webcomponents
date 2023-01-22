@@ -2,7 +2,6 @@ import { terser } from "rollup-plugin-terser";
 import sass from 'rollup-plugin-sass';
 import typescript from '@rollup/plugin-typescript';
 import resolve from '@rollup/plugin-node-resolve';
-import { dirname } from 'path';
 
 
 export default {
@@ -14,8 +13,8 @@ export default {
     dir: "dist/",
     format: "es",
     name: 'my-bundle',
-    entryFileNames: 'components/[name]/[name]-[hash].js',
-    chunkFileNames: 'chunk-[name]-[hash].js'
+    entryFileNames: 'components/[name]/index.js',
+    chunkFileNames: '[name].js'
   },
   plugins: [
     typescript(),
