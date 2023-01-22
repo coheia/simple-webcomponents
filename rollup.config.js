@@ -12,8 +12,7 @@ export default {
   output: {
     dir: "dist/",
     format: "es",
-    name: 'my-bundle',
-    entryFileNames: 'components/[name]/index.js',
+    entryFileNames: 'components/[name]/[name].js',
     chunkFileNames: '[name].js'
   },
   plugins: [
