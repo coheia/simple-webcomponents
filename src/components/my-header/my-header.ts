@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
+import MyButton from 'cohe-web-components/dist'
 
 export class MyHeader extends LitElement {
   static get styles() {
@@ -16,7 +17,7 @@ export class MyHeader extends LitElement {
   render() {
     return html`
       <header id="main-header">
-        Logo
+        <my-button>Olá</my-button>
         <slot></slot>
         menu
       </header>

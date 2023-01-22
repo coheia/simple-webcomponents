@@ -249,6 +249,16 @@ chalk@^2.0.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
+cohe-web-components@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/cohe-web-components/-/cohe-web-components-1.0.0.tgz#3606dfd1bf2c57c90451f62edb7075ca77e5df54"
+  integrity sha512-iWQlyri+EUQdMu/qDh30bf+MeEzbpX46M43OBtTCiJb4DI9GV+xh1qnoctdALBMJoNYdeDnslZFgrCsAwT+9BA==
+  dependencies:
+    "@rollup/plugin-multi-entry" "^6.0.0"
+    lit-element "^3.2.2"
+    sass "^1.57.1"
+    tslib "^2.4.1"
+
 color-convert@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"

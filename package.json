@@ -11,10 +11,11 @@
     "build": "rollup -c",
     "watch": "rollup -c -w"
   },
-  "license" : "BSD-3-Clause",
+  "license": "BSD-3-Clause",
   "private": false,
   "dependencies": {
     "@rollup/plugin-multi-entry": "^6.0.0",
+    "cohe-web-components": "^1.0.0",
     "lit-element": "^3.2.2",
     "sass": "^1.57.1",
     "tslib": "^2.4.1"
