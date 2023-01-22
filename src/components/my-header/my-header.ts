@@ -1,5 +1,4 @@
 import { LitElement, html, css } from 'lit-element';
-import MyButton from 'cohe-web-components/dist'
 
 export class MyHeader extends LitElement {
   static get styles() {
