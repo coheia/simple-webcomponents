@@ -1,5 +1,5 @@
 {
-  "name": "@cohe/web-components",
+  "name": "cohe-web-components",
   "version": "1.0.0",
   "description": "A library of web components",
   "main": "dist/index.ts",
