@@ -249,27 +249,6 @@ chalk@^2.0.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
-cohe-web-components@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/cohe-web-components/-/cohe-web-components-1.0.0.tgz#3606dfd1bf2c57c90451f62edb7075ca77e5df54"
-  integrity sha512-iWQlyri+EUQdMu/qDh30bf+MeEzbpX46M43OBtTCiJb4DI9GV+xh1qnoctdALBMJoNYdeDnslZFgrCsAwT+9BA==
-  dependencies:
-    "@rollup/plugin-multi-entry" "^6.0.0"
-    lit-element "^3.2.2"
-    sass "^1.57.1"
-    tslib "^2.4.1"
-
-cohe-web-components@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/cohe-web-components/-/cohe-web-components-1.0.1.tgz#74a1838c94e784488e3bc661d1a4eab5440d589e"
-  integrity sha512-wmBuK1Vc65sscHZ1149zGA1IfNM8VvD9nymEpBGI8t/HR39J3IHEuvzz0hVTitA9VHNImegw2UZU+EOHAiOt0w==
-  dependencies:
-    "@rollup/plugin-multi-entry" "^6.0.0"
-    cohe-web-components "^1.0.0"
-    lit-element "^3.2.2"
-    sass "^1.57.1"
-    tslib "^2.4.1"
-
 color-convert@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
