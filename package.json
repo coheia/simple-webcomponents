@@ -1,5 +1,5 @@
 {
-  "name": "simple-webcomponents",
+  "name": "@coheia/simple-webcomponents",
   "version": "1.0.8",
   "description": "A library of web components",
   "main": "dist/index.js",
