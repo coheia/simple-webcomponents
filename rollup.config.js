@@ -1,18 +1,26 @@
+import resolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
-import resolve from '@rollup/plugin-node-resolve';
-import styles from "rollup-plugin-styles";
+import glob from 'glob';
 import esbuild from "rollup-plugin-esbuild";
+import styles from "rollup-plugin-styles";
+import path from 'path'
+
+const entryPoints = glob.sync('src/components/**/**.ts').map(file => path.resolve(file));
+entryPoints.push('src/index.ts')
 
 export default {
-  input: {
-    'my-button': 'src/components/my-button/my-button.ts',
-    'my-header': 'src/components/my-header/my-header.ts'
-  },
+  input: entryPoints,
   output: {
     dir: "dist/",
     format: "es",
-    entryFileNames: 'components/[name]/[name].js',
+    entryFileNames: (file) => {
+      if(file.name == 'index'){
+        return '[name].js'
+      }
+      
+      return 'components/[name]/[name].js'
+    },
     chunkFileNames: '[name].js'
   },
   plugins: [
@@ -20,6 +28,7 @@ export default {
     esbuild(),
     styles(),
     resolve(),
-    terser()
-  ]
+    terser(),
+  ],
+  preserveEntrySignatures: 'strict',
 };
