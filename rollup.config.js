@@ -2,7 +2,6 @@ import resolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import glob from 'glob';
-import esbuild from "rollup-plugin-esbuild";
 import styles from "rollup-plugin-styles";
 import path from 'path'
 
@@ -18,6 +17,11 @@ export default {
       if(file.name == 'index'){
         return '[name].js'
       }
+
+      const splitName = file.name.split('.')
+      if(splitName[1] == 'css'){
+        return `components/${splitName[0]}/[name].js`
+      }
       
       return 'components/[name]/[name].js'
     },
@@ -25,8 +29,11 @@ export default {
   },
   plugins: [
     typescript(),
-    esbuild(),
-    styles(),
+    styles({
+      sass: {
+        sync: true
+      }
+    }),
     resolve(),
     terser(),
   ],

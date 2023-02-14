@@ -7,8 +7,6 @@
     "outDir": "dist",
     "moduleResolution": "node",
     "paths": {
-      "lit-element": ["node_modules/lit-element", 
-      "node_modules/cohe-web-components"],
       "@coheia/simple-webcomponents/*": ["./components/*"]
     },
     "strict": true,

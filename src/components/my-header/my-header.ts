@@ -1,7 +1,7 @@
-import { LitElement, html, css, unsafeCSS } from 'lit';
-import style from './my-header.scss'
+import { LitElement, html } from 'lit';
+import { styles } from './my-header.css' 
 export class MyHeader extends LitElement {
-  static styles = unsafeCSS(style)
+  static styles = styles
 
   render() {
     

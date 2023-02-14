@@ -1,12 +1,13 @@
-import { LitElement, css, html, unsafeCSS } from 'lit';
-import style from './my-button.scss' 
+import { LitElement, html } from 'lit';
+import { styles } from './my-button.css' 
 
 export class MyButton extends LitElement {
-  static styles = unsafeCSS(style)
+  static styles = styles
 
   render() {
     return html`
       <button>
+        <i></i>
         <slot></slot>
       </button>
     `;
