@@ -1,11 +1,20 @@
 Proof of concept of a structure to automate the processes of development, documentation and distribution of webcomponents, designed to serve a Desgin System, or a UI Library which follows the principles of [Component Driven UI](https://www.componentdriven.org/), being built from the bottom up.
 
+## Develop
+```console
+git clone git@github.com:coheia/simple-webcomponents.git
+cd simple-webcomponents
+yarn
+yarn dev
+```
+
 ## Stack
 - typescript
 - sass
 - [lit](https://lit.dev/)
   - lit-html
   - lit-element
+- [storybook](https://storybook.js.org/)
 
 ## Roadmap
 

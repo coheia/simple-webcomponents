@@ -4,6 +4,8 @@ import typescript from '@rollup/plugin-typescript';
 import glob from 'glob';
 import styles from "rollup-plugin-styles";
 import path from 'path'
+import cleaner from 'rollup-plugin-cleaner';
+import ignore from "rollup-plugin-ignore"
 
 const entryPoints = glob.sync('src/components/**/**.ts').map(file => path.resolve(file));
 entryPoints.push('src/index.ts')
@@ -28,7 +30,14 @@ export default {
     chunkFileNames: '[name].js'
   },
   plugins: [
-    typescript(),
+    typescript({
+      exclude: "./src/stories/**/*"
+    }),
+    cleaner({
+      targets: [
+        './dist/**/*.d.ts'
+      ]
+    }),
     styles({
       sass: {
         sync: true

@@ -6,6 +6,8 @@
     "baseUrl": "./src",
     "outDir": "dist",
     "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
     "paths": {
       "@coheia/simple-webcomponents/*": ["./components/*"]
     },
@@ -14,5 +16,12 @@
   },
   "include": [
     "src/**/*",
+    "!src/**/*.stories.ts",
+  ],
+  "exclude": [
+      "node_modules",
+      "**/node_modules/*",
+      "./.storybook/**/*",
+      "./stories/**/*"
   ]
 }

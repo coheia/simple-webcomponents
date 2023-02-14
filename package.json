@@ -12,11 +12,19 @@
     "build:css-to-ts": "wireit",
     "build:sass": "wireit",
     "watch:sass": "wireit",
-    "dev": "wireit"
+    "dev": "wireit",
+    "storybook": "wireit",
+    "build:storybook": "wireit"
   },
   "wireit": {
     "dev": {
-      "command": "concurrently \"rollup -c -w\" \"yarn watch:sass\" \"yarn build:css-to-ts --watch\""
+      "command": "concurrently \"rollup -c -w\" \"yarn build:sass --watch\" \"yarn build:css-to-ts --watch\" \"yarn storybook --watch\""
+    },
+    "storybook": {
+      "command": "start-storybook -p 6006"
+    },
+    "build:storybook": {
+      "command": "build-storybook"
     },
     "build": {
       "command": "rollup -c",
@@ -68,19 +76,30 @@
     "tslib": "^2.5.0"
   },
   "devDependencies": {
-    "sass": "^1.58.0",
-    "sass-true": "^7.0.0",
-    "concurrently": "^7.6.0",
-    "glob": "^8.1.0",
-    "wireit": "^0.9.5",
+    "@babel/core": "^7.20.12",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-multi-entry": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-terser": "^0.4.0",
     "@rollup/plugin-typescript": "^11.0.0",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack4": "^6.5.16",
+    "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/web-components": "^6.5.16",
+    "babel-loader": "^8.3.0",
+    "concurrently": "^7.6.0",
     "esbuild": "^0.17.8",
+    "glob": "^8.1.0",
+    "lit-html": "^2.6.1",
     "rollup": "^3.15.0",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-ignore": "^1.0.10",
     "rollup-plugin-styles": "^4.0.0",
-    "typescript": "^4.9.4"
+    "sass": "^1.58.0",
+    "sass-true": "^7.0.0",
+    "typescript": "^4.9.4",
+    "wireit": "^0.9.5"
   }
 }

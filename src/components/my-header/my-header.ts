@@ -1,5 +1,8 @@
 import { LitElement, html } from 'lit';
-import { styles } from './my-header.css' 
+import { styles } from './my-header.css'
+import {customElement, property, eventOptions, query} from 'lit/decorators.js';
+
+@customElement('my-header')
 export class MyHeader extends LitElement {
   static styles = styles
 
@@ -13,5 +16,3 @@ export class MyHeader extends LitElement {
     `;
   }
 }
-
-customElements.define('my-header', MyHeader);

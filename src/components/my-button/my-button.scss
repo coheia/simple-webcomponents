@@ -6,6 +6,10 @@ button {
   display: flex;
   gap: 10px;
 
+  &:disabled {
+    background-color: aqua;
+  }
+
   i {
     background-color: red;
     border: 3px solid black;
