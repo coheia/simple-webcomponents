@@ -1,4 +1,4 @@
-Proof of concept of a structure to automate the processes of development, documentation and distribution of webcomponents, designed to serve a Desgin System, or a UI Library following the [Component Driven](https://www.componentdriven.org/) which follows the principles of Component Driven UI, being built from the bottom up.
+Proof of concept of a structure to automate the processes of development, documentation and distribution of webcomponents, designed to serve a Desgin System, or a UI Library which follows the principles of [Component Driven UI](https://www.componentdriven.org/), being built from the bottom up.
 
 ## Stack
 - typescript
