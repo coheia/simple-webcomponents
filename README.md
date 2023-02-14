@@ -12,8 +12,6 @@ yarn dev
 - typescript
 - sass
 - [lit](https://lit.dev/)
-  - lit-html
-  - lit-element
 - [storybook](https://storybook.js.org/)
 
 ## Roadmap
