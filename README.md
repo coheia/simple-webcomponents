@@ -8,6 +8,8 @@ yarn
 yarn dev
 ```
 
+Access [http://localhost:6006/](http://localhost:6006/)
+
 ## Stack
 - typescript
 - sass

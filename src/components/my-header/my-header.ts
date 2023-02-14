@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
-import { styles } from './my-header.css'
-import {customElement, property, eventOptions, query} from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
+import { styles } from './my-header.css';
 
 @customElement('my-header')
 export class MyHeader extends LitElement {
