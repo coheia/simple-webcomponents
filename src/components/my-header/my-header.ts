@@ -4,7 +4,6 @@ export class MyHeader extends LitElement {
   static styles = styles
 
   render() {
-    
     return html`
       <header id="main-header">
         <my-button>Olá</my-button>

@@ -64,15 +64,15 @@
   "license": "BSD-3-Clause",
   "private": false,
   "dependencies": {
-    "concurrently": "^7.6.0",
-    "glob": "^8.1.0",
     "lit": "^2.6.1",
-    "sass": "^1.58.0",
-    "sass-true": "^7.0.0",
-    "tslib": "^2.5.0",
-    "wireit": "^0.9.5"
+    "tslib": "^2.5.0"
   },
   "devDependencies": {
+    "sass": "^1.58.0",
+    "sass-true": "^7.0.0",
+    "concurrently": "^7.6.0",
+    "glob": "^8.1.0",
+    "wireit": "^0.9.5",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-multi-entry": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
