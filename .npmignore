@@ -1,7 +1,5 @@
-node_modules/
-examples/
-src/
-.git/
+examples
+src
 rollup.config.js
 tsconfig.json
 *.tgz

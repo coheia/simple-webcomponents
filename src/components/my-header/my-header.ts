@@ -1,19 +1,10 @@
-import { LitElement, html, css } from 'lit-element';
-
+import { LitElement, html, css, unsafeCSS } from 'lit';
+import style from './my-header.scss'
 export class MyHeader extends LitElement {
-  static get styles() {
-    return css`
-      header {
-        padding: var(--button-padding, 0.5em 1em);
-        border: 1px solid red;
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-      }
-    `;
-  }
+  static styles = unsafeCSS(style)
 
   render() {
+    
     return html`
       <header id="main-header">
         <my-button>Olá</my-button>

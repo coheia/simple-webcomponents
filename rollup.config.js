@@ -1,8 +1,8 @@
-import { terser } from "rollup-plugin-terser";
-import sass from 'rollup-plugin-sass';
+import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import resolve from '@rollup/plugin-node-resolve';
-
+import styles from "rollup-plugin-styles";
+import esbuild from "rollup-plugin-esbuild";
 
 export default {
   input: {
@@ -17,10 +17,8 @@ export default {
   },
   plugins: [
     typescript(),
-    sass({
-      include: 'src/components/*.scss',
-      output: true
-    }),
+    esbuild(),
+    styles(),
     resolve(),
     terser()
   ]

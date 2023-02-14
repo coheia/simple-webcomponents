@@ -1,16 +1,8 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, css, html, unsafeCSS } from 'lit';
+import style from './my-button.scss' 
 
 export class MyButton extends LitElement {
-  static get styles() {
-    return css`
-      button {
-        background-color: var(--button-bg, blue);
-        color: var(--button-color, white);
-        padding: var(--button-padding, 0.5em 1em);
-        border-radius: var(--button-border-radius, 0.25em);
-      }
-    `;
-  }
+  static styles = unsafeCSS(style)
 
   render() {
     return html`
