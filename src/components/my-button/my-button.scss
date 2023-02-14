@@ -1,3 +1,6 @@
 button {
-  background: brown;
+  background-color: var(--button-bg, blue);
+  color: var(--button-color, white);
+  padding: var(--button-padding, 0.5em 1em);
+  border-radius: var(--button-border-radius, 0.25em);
 }
