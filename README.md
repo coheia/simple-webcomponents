@@ -14,8 +14,6 @@ Access [http://localhost:6006/](http://localhost:6006/)
 - typescript
 - sass
 - [lit](https://lit.dev/)
-  - lit-html
-  - lit-element
 - [storybook](https://storybook.js.org/)
 
 ## Roadmap
