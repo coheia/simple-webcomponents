@@ -33,5 +33,4 @@ changes.
 
 Component                     | Alpha | Beta  | Stable
 ----------------------------- | :---: | :---: | :---:
-My Button                     | 🟡    | 🔴    | 🔴
-My Header                     | 🟡    | 🔴    | 🔴
+Button                        | 🟡    | 🔴    | 🔴
