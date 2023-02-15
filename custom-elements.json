@@ -1,0 +1,51 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "swc-button",
+      "path": "./src/components/swc-button/swc-button.ts",
+      "attributes": [
+        {
+          "name": "icon",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "default": "\"white\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "CSSResult",
+          "default": "\"styles\""
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "loading",
+          "attribute": "loading",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "color",
+          "attribute": "color",
+          "type": "string",
+          "default": "\"white\""
+        }
+      ]
+    }
+  ]
+}

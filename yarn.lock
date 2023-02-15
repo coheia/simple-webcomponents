@@ -3221,6 +3221,11 @@ csstype@^3.0.2:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.1.tgz#841b532c45c758ee546a11d5bd7b7b473c8c30b9"
   integrity sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==
 
+custom-elements-manifest@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/custom-elements-manifest/-/custom-elements-manifest-2.0.0.tgz#6b234f7a57c68ecda291ea70882555729617de6d"
+  integrity sha512-1MmhBRszwnNYqn56nkMeHXn/Zlh998+6Yal3wedbXI7NzKPG02GDgjspdN1NiuDtt2yb5n94JvFwPOF7Prnocg==
+
 date-fns@^2.29.1:
   version "2.29.3"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.29.3.tgz#27402d2fc67eb442b511b70bbdf98e6411cd68a8"

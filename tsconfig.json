@@ -6,6 +6,7 @@
     "baseUrl": "./src",
     "outDir": "dist",
     "moduleResolution": "node",
+    "experimentalDecorators": true,
     "paths": {
       "@coheia/simple-webcomponents/*": ["./components/*"]
     },
