@@ -1,4 +1,6 @@
-/// Gestor Responsivo 
+@import 'variables';
+
+/// Gestor Responsivo
 /// @access public
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
@@ -13,4 +15,9 @@
     @error 'No value found for `#{$breakpoint}`. '
          + 'Please make sure it is defined in `$breakpoints` map.';
   }
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
 }

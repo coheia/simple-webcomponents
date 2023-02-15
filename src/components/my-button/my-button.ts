@@ -12,7 +12,7 @@ export class MyButton extends LitElement {
   loading = 'false';
 
   @property({attribute: 'color', type: String})
-  color = 'black';
+  color = 'white';
 
   render() {
     return html`
