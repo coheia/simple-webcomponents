@@ -4,17 +4,26 @@ import { html } from 'lit-html';
 
 export default {
   title: 'My Button',
+  component: 'my-button',
+  argTypes: {
+    icon: {
+      options: ['true', 'false'],
+      control: { type: 'radio' },
+    },
+    loading: {
+      options: ['true', 'false'],
+      control: { type: 'radio' },
+    },
+  },
 }
 
-export const Basic: Story<Partial<any>> = () => {
-  return html`<my-button icon="false">Basic</my-button>`
-}
-export const WithIcon: Story<Partial<any>> = () => {
-  return html`<my-button icon="true">With icon</my-button>`
+const Basic: Story<Partial<any>> = (args) => {
+  return html`<my-button loading="${args.loading}" icon="${args.icon}">${args.label}</my-button>`
 }
 
-export const Loading: Story<Partial<any>> = () => {
-  return html`
-    <my-button loading="true">Buy</my-button>
-  `
-}
+export const Controls = Basic.bind({});
+Controls.args = {
+  label: 'Basic button',
+  icon: 'true',
+  loading: 'false',
+};

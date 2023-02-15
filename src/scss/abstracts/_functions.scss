@@ -1,0 +1,8 @@
+/// Obtém um valor de z-index através do nome de uma camada
+/// @access public
+/// @param {String} $layer - Nome da camada
+/// @return {Number}
+/// @require $z-indexes
+@function z($layer) {
+  @return map-get($z-indexes, $layer);
+}
