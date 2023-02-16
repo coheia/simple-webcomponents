@@ -7,6 +7,11 @@ export const parameters = {
   backgrounds: {
     default: 'light',
   },
+  options: {
+    storySort: {
+      order: ['General', 'Components', 'Guides'],
+    }
+  },
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
