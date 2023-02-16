@@ -2,6 +2,17 @@
   "version": "experimental",
   "tags": [
     {
+      "name": "swc-amount",
+      "path": "./src/components/swc-amount/swc-amount.ts",
+      "properties": [
+        {
+          "name": "styles",
+          "type": "CSSResult",
+          "default": "\"styles\""
+        }
+      ]
+    },
+    {
       "name": "swc-button",
       "path": "./src/components/swc-button/swc-button.ts",
       "attributes": [
