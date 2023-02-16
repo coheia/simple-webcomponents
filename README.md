@@ -1,11 +1,10 @@
 Proof of concept of a structure to automate the processes of development, documentation and distribution of webcomponents, designed to serve a Desgin System, or a UI Library which follows the principles of [Component Driven UI](https://www.componentdriven.org/), being built from the bottom up.
 
 ## Stack
-- typescript
-- sass
+- [typescript](https://typescriptlang.org)
+- [sass](https://sass-lang.com/)
 - [lit](https://lit.dev/)
-  - lit-html
-  - lit-element
+- [storybook](https://storybook.js.org/)
 
 ## Roadmap
 
@@ -24,5 +23,4 @@ changes.
 
 Component                     | Alpha | Beta  | Stable
 ----------------------------- | :---: | :---: | :---:
-My Button                     | 🟡    | 🔴    | 🔴
-My Header                     | 🟡    | 🔴    | 🔴
+Button                        | 🟡    | 🔴    | 🔴
