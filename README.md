@@ -53,3 +53,4 @@ changes.
 Component                     | Alpha | Beta  | Stable
 ----------------------------- | :---: | :---: | :---:
 Button                        | 🟡    | 🔴    | 🔴
+Amount                        | 🟢    | 🟢    | 🟡
