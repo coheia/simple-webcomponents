@@ -14,7 +14,8 @@ const config: StorybookConfig = {
     "options": {}
   },
   "docs": {
-    "autodocs": "tag"
+    "defaultName": 'Documentation',
+    "autodocs": true,
   },
   async viteFinal(config) {
    // Merge custom configuration into the default config

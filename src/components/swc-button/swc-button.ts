@@ -16,14 +16,13 @@ export class SwcButton extends LitElement {
   color = 'white';
 
   render() {
-    console.log("===> this.icon:", this.icon)
     return html`
       <button
         ?disabled=${this.loading}
         style="background-color: ${this.color};"
       >
-        ${this.icon ? html`<i>icone</i>` : null}
-        ${this.loading ? `Loading...` : html`<slot></slot>`}
+        ${this.icon ? html`<i>+</i>` : null}
+        ${this.loading ? `Carregando...` : html`<slot></slot>`}
       </button>
     `;
   }
