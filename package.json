@@ -20,10 +20,15 @@
   },
   "wireit": {
     "dev": {
-      "command": "concurrently \"yarn storybook\" \"yarn build --watch\" \"yarn build:elements-type --watch\""
+      "command": "concurrently \"yarn storybook\" \"yarn build --watch\""
     },
     "build": {
-      "command": "rollup -c",
+      "command": "build:elements-type & rollup -c",
+      "files": [
+        "src/components/**/*.ts",
+        "!src/components/**/*.css.ts",
+        "!custom-elements.json"
+      ],
       "dependencies": [
         "build:css-to-ts"
       ]
