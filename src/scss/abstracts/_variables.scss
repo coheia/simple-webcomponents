@@ -1,0 +1,17 @@
+$breakpoints: (
+  'medium': (min-width: 800px),
+  'large': (min-width: 1000px),
+  'huge': (min-width: 1200px),
+);
+
+/// Mapa dos z-indexes, reunindo todas as camadas Z da aplicação
+/// @access private
+/// @type Map
+/// @prop {String} key - Nome da camada
+/// @prop {Number} value - Valor de Z mapeado à chave (key)
+$z-indexes: (
+  'modal': 5000,
+  'dropdown': 4000,
+  'default': 1,
+  'below': -1,
+);

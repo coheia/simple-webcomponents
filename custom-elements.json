@@ -18,7 +18,7 @@
         {
           "name": "color",
           "type": "string",
-          "default": "\"white\""
+          "default": "\"black\""
         }
       ],
       "properties": [
@@ -43,7 +43,7 @@
           "name": "color",
           "attribute": "color",
           "type": "string",
-          "default": "\"white\""
+          "default": "\"black\""
         }
       ]
     }

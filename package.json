@@ -20,22 +20,12 @@
   },
   "wireit": {
     "dev": {
-      "command": "concurrently \"yarn storybook\" \"rollup -c -w\" \"yarn watch:sass\" \"yarn build:css-to-ts --watch\" \"yarn build:elements-type --watch\""
+      "command": "concurrently \"yarn storybook\" \"yarn build --watch\" \"yarn build:elements-type --watch\""
     },
     "build": {
       "command": "rollup -c",
       "dependencies": [
         "build:css-to-ts"
-      ]
-    },
-    "build:sass": {
-      "command": "sass --style=compressed --load-path=node_modules --load-path=node_modules/sass-true/sass $(ls -d */ | grep -v node_modules)",
-      "files": [
-        "**/*.scss"
-      ],
-      "output": [
-        "**/*.css",
-        "**/*.css.map"
       ]
     },
     "build:css-to-ts": {
@@ -51,10 +41,21 @@
         "build:sass"
       ]
     },
+    "build:sass": {
+      "command": "sass --style=compressed --load-path=node_modules --load-path=node_modules/sass-true/sass $(ls -d */ | grep -v node_modules)",
+      "files": [
+        "**/*.scss"
+      ],
+      "output": [
+        "**/*.css",
+        "**/*.css.map"
+      ]
+    },
     "build:elements-type": {
       "command": "wca analyze 'src/components/**/*.ts' --format json --outFile custom-elements.json",
       "files": [
-        "src/components/**/*.ts"
+        "src/components/**/*.ts",
+        "!src/components/**/*.css.ts"
       ]
     },
     "watch:sass": {

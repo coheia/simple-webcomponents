@@ -15,7 +15,7 @@ const Basic: StoryFn<Partial<SwcButton & { label: string }>> = (args) => {
 export const Default = Basic.bind({});
 Default.args = {
   label: 'Default button',
-  color: '#00c0ef'
+  color: 'black'
 };
 
 export const Primary  = Basic.bind({});

@@ -7,14 +7,14 @@ const config: StorybookConfig = {
   ],
   "addons": [
     "@storybook/addon-links",
-    "@storybook/addon-essentials"
+    "@storybook/addon-essentials",
   ],
   "framework": {
     "name": "@storybook/web-components-vite",
     "options": {}
   },
   "docs": {
-    "defaultName": 'Documentation',
+    "defaultName": 'Docs',
     "autodocs": true,
   },
   async viteFinal(config) {
@@ -24,6 +24,7 @@ const config: StorybookConfig = {
      optimizeDeps: {
        include: ['storybook-addon-designs'],
      },
+
    });
  },
 };

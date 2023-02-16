@@ -13,7 +13,7 @@ export class SwcButton extends LitElement {
   loading = false;
 
   @property({attribute: 'color', type: String})
-  color = 'white';
+  color = 'black';
 
   render() {
     return html`

@@ -5,8 +5,15 @@
     "declaration": true,
     "baseUrl": "./src",
     "outDir": "dist",
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"forceConsistentCasingInFileNames": true,
+		"useDefineForClassFields": false,
     "paths": {
       "@coheia/simple-webcomponents/*": ["./components/*"]
     },
