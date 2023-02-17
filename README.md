@@ -1,3 +1,5 @@
+![typescript3](https://user-images.githubusercontent.com/81380764/219517131-550e9838-d239-4cf2-96ee-a3f98bb3b373.svg)      ![sass-13](https://user-images.githubusercontent.com/81380764/219517128-8ad988cb-8e32-49be-810c-744d3075c463.svg)    ![lit-13](https://user-images.githubusercontent.com/81380764/219517123-97f6fde9-414c-4313-92da-b90a2d8c9481.svg)      ![storybook-15](https://user-images.githubusercontent.com/81380764/219517390-fa1be042-d15a-412b-9bb6-6ee517ac0713.svg)         ![webcomponents-icon](https://user-images.githubusercontent.com/81380764/219517133-0ac9c66c-6183-422c-8950-c8ecf5f24120.svg)      ![logo-componentdriven](https://user-images.githubusercontent.com/81380764/219517629-652b79e6-4a80-4cb0-b504-bc316ddec8b6.svg)
+
 Proof of concept of a structure to automate the processes of development, documentation and distribution of webcomponents, designed to serve a Desgin System, or a UI Library which follows the principles of [Component Driven UI](https://www.componentdriven.org/), being built from the bottom up.
 
 ## **Get started**
@@ -30,27 +32,28 @@ This will launch the development server at **http://localhost:6006**, where you 
 Note that prior knowledge of TypeScript, Sass, Lit, and Storybook is recommended. Refer to their respective documentation for more information on these technologies.
 
 ## Stack
-- [typescript](https://typescriptlang.org)
-- [sass](https://sass-lang.com/)
-- [lit](https://lit.dev/)
-- [storybook](https://storybook.js.org/)
+
+*   [typescript](https://typescriptlang.org)
+*   [sass](https://sass-lang.com/)
+*   [lit](https://lit.dev/)
+*   [storybook](https://storybook.js.org/)
 
 ## Roadmap
 
-**Alpha** components are in-development and may have many frequent breaking
+**Alpha** components are in-development and may have many frequent breaking  
 changes.
 
 **Beta** components are mostly polished and ready for use.
 
 **Stable** components are reviewed, documented, and API complete.
 
--   🔴 Not started
--   🟡 In progress
--   🟢 Complete
+*   🔴 Not started
+*   🟡 In progress
+*   🟢 Complete
 
 ### Components
 
-Component                     | Alpha | Beta  | Stable
------------------------------ | :---: | :---: | :---:
-Button                        | 🟡    | 🔴    | 🔴
-Amount                        | 🟢    | 🟢    | 🟡
+| Component | Alpha | Beta | Stable |
+| --- | --- | --- | --- |
+| Button | 🟡 | 🔴 | 🔴 |
+| Amount | 🟢 | 🟢 | 🟡 |
