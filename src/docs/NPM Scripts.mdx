@@ -1,0 +1,13 @@
+import { Meta } from '@storybook/blocks';
+
+`<Meta title="The project/NPM Scripts" />`
+
+## NPM Scripts
+
+* **dev**: Watch concurrently `build:css-to-ts`, `vite build --mode development` and `build:elements-type`.
+* **build**: Runs `vite build --mode production` for production build, depends on `build:css-to-ts`, `build:elements-type` and `build:storybook`.
+* **build:sass**: Compiles all `.scss` files to `.css` files.
+* **build:css-to-ts**: Finds all `.css` files and converts them to `.css.ts` files using `css-to-ts.js`, depends on `build:sass`.
+* **build:elements-type**: Analyzes the TypeScript files that match the glob pattern `src/components/**/swc-+([a-z]).ts` and generates a `custom-elements.json` file using the [**wca** CLI](https://www.npmjs.com/package/web-component-analyzer).
+* **clean**: Removes the `dist` directory.
+* **clean:all**: Removes the `node_modules` directory and and exec `npm run clean`.

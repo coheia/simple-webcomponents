@@ -22,9 +22,8 @@ const config: StorybookConfig = {
    return mergeConfig(config, {
      // Add storybook-specific dependencies to pre-optimization
      optimizeDeps: {
-       include: ['storybook-addon-designs'],
+       include: ['storybook-addon-designs']
      },
-
    });
  },
 };

@@ -1,6 +1,6 @@
 import { Meta, StoryFn } from '@storybook/web-components';
 import { html } from 'lit-html';
-import { SwcButton } from '../../dist/components/swc-button/swc-button';
+import { SwcButton } from '../../../dist/components/swc-button/swc-button';
 
 export default {
   title: 'Components/Button',

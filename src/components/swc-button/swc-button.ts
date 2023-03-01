@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import { styles } from './swc-button.css' 
+import { styles } from './swc-button.css.js'
 import {customElement, property} from 'lit/decorators.js';
 
 @customElement('swc-button')
@@ -13,7 +13,10 @@ export class SwcButton extends LitElement {
   loading = false;
 
   @property({attribute: 'color', type: String})
-  color = 'black';
+  color = 'grey';
+
+  @property({attribute: 'hotpink60', type: String})
+  hotpink60 = 'grey';
 
   render() {
     return html`

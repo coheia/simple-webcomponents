@@ -29,7 +29,12 @@
         {
           "name": "color",
           "type": "string",
-          "default": "\"black\""
+          "default": "\"grey\""
+        },
+        {
+          "name": "hotpink60",
+          "type": "string",
+          "default": "\"grey\""
         }
       ],
       "properties": [
@@ -54,7 +59,13 @@
           "name": "color",
           "attribute": "color",
           "type": "string",
-          "default": "\"black\""
+          "default": "\"grey\""
+        },
+        {
+          "name": "hotpink60",
+          "attribute": "hotpink60",
+          "type": "string",
+          "default": "\"grey\""
         }
       ]
     }

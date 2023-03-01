@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { styles } from './swc-amount.css';
+import { styles } from './swc-amount.css.js';
 
 @customElement('swc-amount')
 export class SwcAmount extends LitElement {

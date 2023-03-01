@@ -1,6 +1,6 @@
 import { Meta, StoryFn } from '@storybook/web-components';
 import { html } from 'lit-html';
-import { SwcAmount } from '../../dist/components/swc-amount/swc-amount';
+import { SwcAmount } from '../../../dist/components/swc-amount/swc-amount';
 
 export default {
   title: 'Components/Amount',
