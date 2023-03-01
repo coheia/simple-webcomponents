@@ -20,6 +20,10 @@ export default defineConfig(({mode}) => {
             rename: async (fileName, fileExtension, fullPath) => {
               return fullPath.replace('src/', '');
             }
+          },
+          {
+            src: 'dist/**/*',
+            dest: 'storybook-static/dist',
           }
         ]
       })
