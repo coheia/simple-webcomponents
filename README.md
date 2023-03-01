@@ -8,11 +8,16 @@ Proof of concept of a structure to automate the processes of development, docume
 ```console
 git clone git@github.com:coheia/simple-webcomponents.git
 cd simple-webcomponents
-yarn
-yarn dev
+npm install
+npm run dev
 ```
 
-This will launch the development server at **http://localhost:6006**, where you can view the Storybook and begin [developing your own web components](https://github.com/coheia/simple-webcomponents/blob/main/src/stories/How%20to%20create%20a%20new%20component.mdx).
+In a separated terminal run:
+```console
+npm run storybook
+```
+
+This will launch the development server at **http://localhost:3002**, where you can view the Storybook and begin [developing your own web components](https://github.com/coheia/simple-webcomponents/blob/vite-config/src/docs/How%20to%20create%20a%20new%20component.mdx).
 
 Note that prior knowledge of TypeScript, Sass, Lit, and Storybook is recommended. Refer to their respective documentation for more information on these technologies:
 *   [typescript](https://typescriptlang.org)
