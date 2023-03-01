@@ -46,7 +46,6 @@ export default defineConfig(({mode}) => {
         },
         preserveEntrySignatures: 'strict',
       },
-      watch: mode === 'development'
     }
   }
 })
