@@ -22,8 +22,8 @@ export default defineConfig(({mode}) => {
             }
           },
           {
-            src: 'dist/**/*',
-            dest: 'storybook-static/dist',
+            src: 'dist',
+            dest: '../storybook-static',
           }
         ]
       })
