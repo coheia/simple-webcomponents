@@ -16,7 +16,9 @@
     "storybook": "storybook dev -p 3002",
     "build:storybook": "storybook build",
     "build:elements-type": "wireit",
-    "clean": "rm -rf dist",
+    "clean": "npm run clean:storybook && npm run clean:dist",
+    "clean:dist": "rm -rf dist",
+    "clean:storybook": "rm -rf storybook-static",
     "clean:all": "rm -rf node_modules && npm run clean"
   },
   "wireit": {
