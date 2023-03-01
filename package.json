@@ -9,17 +9,19 @@
   },
   "customElements": "custom-elements.json",
   "scripts": {
+    "storybook": "storybook dev -p 3002",
     "dev": "wireit",
     "build": "wireit",
     "build:css-to-ts": "wireit",
     "build:sass": "wireit",
-    "storybook": "storybook dev -p 3002",
     "build:storybook": "storybook build",
     "build:elements-type": "wireit",
     "clean": "npm run clean:storybook && npm run clean:dist",
     "clean:dist": "rm -rf dist",
     "clean:storybook": "rm -rf storybook-static",
-    "clean:all": "rm -rf node_modules && npm run clean"
+    "clean:wireit-cache": "rm -rf .wireit",
+    "clean:gitignore": "git clean -fXd",
+    "clean:all": "rm -rf node_modules .storybook-static .wireit dist && git clean -fXd"
   },
   "wireit": {
     "dev": {
