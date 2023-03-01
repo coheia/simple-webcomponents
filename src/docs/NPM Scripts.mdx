@@ -4,14 +4,16 @@ import { Meta } from '@storybook/blocks';
 
 ## NPM Scripts
 
-* **dev**: Watch concurrently `npm run build:css-to-ts --watch`, `vite build --watch` and `npm run build:elements-type --watch`.
-
+* **storybook**: Starts Storybook's development server.
+* **dev**: Build and watch concurrently `npm run build:css-to-ts --watch`, `vite build --watch` and `npm run build:elements-type --watch`.
 * **build**: Runs `vite build` for production build, depends on `build:css-to-ts`, `build:elements-type` and `build:storybook`.
-* **build:sass**: Compiles all `.scss` files to `.css` files.
 * **build:css-to-ts**: Finds all `.css` files and converts them to `.css.ts` files using `css-to-ts.js` script, depends on `build:sass`.
+* **build:sass**: Compiles all `.scss` files to `.css` files.
+* **build:storybook**: Compiles storybook into `.storybook-static`.
 * **build:elements-type**: Analyzes component files using the glob pattern `src/components/**/swc-+([a-z]).ts` and generates a `custom-elements.json` file using the [**wca** CLI](https://www.npmjs.com/package/web-component-analyzer).
-
 * **clean**: Exec `clean:dist` and `clean:storybook`.
 * **clean:dist**: Removes the `dist` directory.
 * **clean:storybook**: Removes the `storybook-static` directory.
-* **clean:all**: Removes the `node_modules` directory and and exec `clean`.
+* **clean:wireit-cache**: Removes the `.wireit` directory.
+* **clean:gitignore**: Removes all files from repo that are in the `.gitignore` file
+* **clean:all**: Removes the `node_modules`, `.storybook-static`, `dist`, `.wireit` directories and will remove all files from repo that are in the `.gitignore` file.
