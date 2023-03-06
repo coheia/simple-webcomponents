@@ -3,3 +3,10 @@ tsconfig.json
 *.tgz
 *.log
 *.map
+vite.config.js
+vercel.json
+css-to-ts.js
+custom-elements.json
+storybook-static
+.wireit
+.storybook
