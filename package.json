@@ -21,7 +21,10 @@
     "clean:storybook": "rm -rf storybook-static",
     "clean:wireit-cache": "rm -rf .wireit",
     "clean:gitignore": "git clean -fXd",
-    "clean:all": "rm -rf node_modules .storybook-static .wireit dist && git clean -fXd"
+    "clean:all": "rm -rf node_modules .storybook-static .wireit dist && git clean -fXd",
+    "prepublish": "npm run build",
+    "publish:patch": "npm run prepublish && npm version patch && npm publish",
+    "publish:minor": "npm run prepublish && npm version minor && npm publish"
   },
   "wireit": {
     "dev": {
