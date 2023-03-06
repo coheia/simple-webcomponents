@@ -5,3 +5,4 @@ dist/
 .wireit
 *.css*
 storybook-static
+.vscode
