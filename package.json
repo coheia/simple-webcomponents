@@ -33,8 +33,7 @@
       "command": "vite build",
       "dependencies": [
         "build:css-to-ts",
-        "build:elements-type",
-        "build:storybook"
+        "build:elements-type"
       ]
     },
     "build:css-to-ts": {
@@ -78,11 +77,6 @@
     "vite": "^4.1.1"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^24.0.1",
-    "@rollup/plugin-multi-entry": "^6.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.1",
-    "@rollup/plugin-terser": "^0.4.0",
-    "@rollup/plugin-typescript": "^11.0.0",
     "@storybook/addon-docs": "^6.5.16",
     "@storybook/addon-essentials": "^7.0.0-beta.48",
     "@storybook/addon-links": "^7.0.0-beta.48",
