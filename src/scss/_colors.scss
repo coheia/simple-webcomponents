@@ -1,0 +1,37 @@
+$colors: 'primary', 'secondary', 'info', 'success', 'error', 'warning';
+
+$primary-light:hsl(50, 100%, 75%);
+$primary: 	   hsl(50, 100%, 50%);
+$primary-dark: hsl(50, 100%, 40%);
+
+$secondary-light:hsl(163, 100%, 75%);
+$secondary: 	   hsl(163, 100%, 50%);
+$secondary-dark: hsl(163, 100%, 40%);
+
+$success-light:hsl(97, 32%, 75%);
+$success: 	   hsl(97, 32%, 50%);
+$success-dark: hsl(97, 32%, 40%);
+
+$error-light:  hsl(349, 96%, 75%);
+$error: 	     hsl(349, 96%, 50%);
+$error-dark: 	 hsl(349, 96%, 40%);
+
+$info-light: 	 hsl(210, 67%, 75%);
+$info: 	       hsl(210, 67%, 50%);
+$info-dark: 	 hsl(210, 67%, 40%);
+
+$warning-light:  hsl(21, 89%, 75%);
+$warning:        hsl(21, 89%, 50%);
+$warning-dark:   hsl(21, 89%, 40%);
+
+$white:        hsl(0, 0%, 96%);
+$gray-90:      hsl(0, 0%, 90%);
+$gray-85:      hsl(0, 0%, 85%);
+$gray-70:      hsl(0, 0%, 70%);
+$gray-60:      hsl(0, 0%, 60%);
+$gray:         hsl(0, 0%, 50%);
+$gray-40:      hsl(0, 0%, 40%);
+$gray-30:      hsl(0, 0%, 30%);
+$gray-20:      hsl(0, 0%, 20%);
+$gray-10:      hsl(0, 0%, 10%);
+$black: 	     hsl(0, 0%, 4%);

@@ -1,3 +1,7 @@
+@import '../_colors.scss';
+
+$border-radius: 3px;
+
 $breakpoints: (
   'medium': (min-width: 800px),
   'large': (min-width: 1000px),

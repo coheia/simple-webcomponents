@@ -1,12 +1,105 @@
-button {
-  border: 2px solid hotpink;
-  margin: 0 10px;
-  border-radius: 3px;
-  padding: 10px 15px;
-  color: white;
+@import '../../scss/abstracts/mixins';
+@import '../../scss/abstracts/variables';
 
-  &:active {
-    background-color: aqua !important;
-    color: black;
+@mixin color-button($color) {
+    border-color: $color;
+    @include bg-color($color)
+}
+
+:host(*) {
+  width: fit-content;
+  height: fit-content;
+}
+
+button {
+  cursor: pointer;
+  margin: 3px;
+  border-radius: $border-radius;
+  font-weight: bold;
+  border: 0;
+  align-items: center;
+  gap: 1em;
+  padding: 1em 1.7em;
+
+
+  &.swc-button {
+    border-width: 0.1em;
+    box-sizing: border-box;
+    border-style: solid;
+
+    @each $color in $colors {
+      $color-name: 'primary';
+      $color-light: $primary-light;
+      $color-dark: $primary-dark;
+
+      @if $color == 'primary' {
+        $color-name: $color;
+        $color: $primary;
+        $color-light: $primary-light;
+        $color-dark: $primary-dark;
+      }
+
+      @if $color == 'secondary' {
+        $color-name: $color;
+        $color: $secondary;
+        $color-light: $secondary-light;
+        $color-dark: $secondary-dark;
+      }
+
+      @if $color == 'info' {
+        $color-name: $color;
+        $color: $info;
+        $color-light: $info-light;
+        $color-dark: $info-dark;
+      }
+
+      @if $color == 'error' {
+        $color-name: $color;
+        $color: $error;
+        $color-light: $error-light;
+        $color-dark: $error-dark;
+      }
+
+      @if $color == 'warning' {
+        $color-name: $color;
+        $color: $warning;
+        $color-light: $warning-light;
+        $color-dark: $warning-dark;
+      }
+
+      @if $color == 'success' {
+        $color-name: $color;
+        $color: $success;
+        $color-light: $success-light;
+        $color-dark: $success-dark;
+      }
+
+      &.swc-button--#{$color-name} {
+        @include color-button($color);
+        &.swc-button--outlined {
+          color: $color;
+          border-color: $gray;
+          &:hover {
+            @include color-button($color);
+          }
+          &:active {
+            @include color-button($color-dark);
+          }
+        }
+        &:hover {
+          @include color-button($color-light);
+        }
+        &:active {
+          @include color-button($color-dark);
+        }
+      }
+    }
+    
+    &.swc-button--outlined {
+      background: transparent;
+    }
   }
+
+  @include focus-ring();
+  @include disabled();
 }

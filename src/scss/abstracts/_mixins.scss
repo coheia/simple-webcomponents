@@ -21,3 +21,36 @@
   width: $width;
   height: $height;
 }
+
+@mixin focus-ring() {
+  &:focus {
+    outline: 3px solid $info;
+  }
+}
+
+@mixin disabled() {
+  &:disabled {
+    background-color: $gray-90 !important;
+    color: $gray !important;
+    border-color: $gray-90 !important;
+    cursor: not-allowed;
+  }
+}
+
+@mixin bg-color($color) {
+  background-color: $color;
+  @include text-contrast($color);
+}
+
+@mixin text-contrast($n) {
+  $color-brightness: round((red($n) * 299) + (green($n) * 587) + calc((blue($n) * 114) / 1000));
+  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + calc((blue(#ffffff) * 114) / 1000));
+  
+  @if abs($color-brightness) < (calc($light-color/2)){
+    color: $white;
+  }
+
+  @else {
+    color: $black;
+  }
+}

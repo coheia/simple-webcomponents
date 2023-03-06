@@ -1,20 +1,23 @@
-#wrapper {
-  font-size: 2rem;
-  display: flex;
-  flex-direction: row;
+@import '../../scss/abstracts/mixins';
+@import '../../scss/abstracts/variables';
 
-.counter {
-  background-color: antiquewhite;
-  border-radius: 20px;
-  padding: 5px 10px;
-  min-width: 40px;
-  text-align: center;
-}
-
-  button {
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    margin: 0.2rem;
+:host([disabled]) {
+  .swc-amount__wrapper {
+    .counter {
+      cursor: not-allowed;
+    }
   }
 }
 
+.swc-amount__wrapper {
+  display: flex;
+  flex-direction: row;
+
+  .counter {
+    background-color: $gray-90;
+    border-radius: $border-radius;
+    padding: calc(1em - 3px) 1.7em;
+    text-align: center;
+    margin: 3px 0;
+  }
+}
