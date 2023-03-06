@@ -17,3 +17,7 @@ import { Meta } from '@storybook/blocks';
 * **clean:wireit-cache**: Removes the `.wireit` directory.
 * **clean:gitignore**: Removes all files from repo that are in the `.gitignore` file
 * **clean:all**: Removes the `node_modules`, `.storybook-static`, `dist`, `.wireit` directories and will remove all files from repo that are in the `.gitignore` file.
+* **prepublish**: Prepare the `dist` folder to be published as a library.
+* **publish:patch**: Runs `prepublish`, create a new version patch and publish at NPM.
+* **publish:minor**: Runs `prepublish`, create a new version minor and publish at NPM.
+* **publish:major**: Runs `prepublish`, create a new version major and publish at NPM.
