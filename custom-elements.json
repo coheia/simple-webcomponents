@@ -4,11 +4,51 @@
     {
       "name": "swc-amount",
       "path": "./src/components/swc-amount/swc-amount.ts",
+      "attributes": [
+        {
+          "name": "color",
+          "type": "string",
+          "default": "\"primary\""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "outlined",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
       "properties": [
+        {
+          "name": "shadowRootOptions",
+          "type": "ShadowRootInit",
+          "default": "{\"mode\":\"open\",\"delegatesFocus\":true}"
+        },
         {
           "name": "styles",
           "type": "CSSResult",
           "default": "\"styles\""
+        },
+        {
+          "name": "color",
+          "attribute": "color",
+          "type": "string",
+          "default": "\"primary\""
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "outlined",
+          "attribute": "outlined",
+          "type": "boolean",
+          "default": "false"
         }
       ]
     },
@@ -17,55 +57,60 @@
       "path": "./src/components/swc-button/swc-button.ts",
       "attributes": [
         {
-          "name": "icon",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "loading",
-          "type": "boolean",
-          "default": "false"
+          "name": "label",
+          "type": "string",
+          "default": "\"\""
         },
         {
           "name": "color",
-          "type": "string",
-          "default": "\"grey\""
+          "type": "\"primary\" | \"secondary\" | \"info\" | \"success\" | \"error\" | \"warning\"",
+          "default": "\"primary\""
         },
         {
-          "name": "hotpink60",
-          "type": "string",
-          "default": "\"grey\""
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "outlined",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "properties": [
+        {
+          "name": "shadowRootOptions",
+          "type": "ShadowRootInit",
+          "default": "{\"mode\":\"open\",\"delegatesFocus\":true}"
+        },
         {
           "name": "styles",
           "type": "CSSResult",
           "default": "\"styles\""
         },
         {
-          "name": "icon",
-          "attribute": "icon",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "loading",
-          "attribute": "loading",
-          "type": "boolean",
-          "default": "false"
+          "name": "label",
+          "attribute": "label",
+          "type": "string",
+          "default": "\"\""
         },
         {
           "name": "color",
           "attribute": "color",
-          "type": "string",
-          "default": "\"grey\""
+          "type": "\"primary\" | \"secondary\" | \"info\" | \"success\" | \"error\" | \"warning\"",
+          "default": "\"primary\""
         },
         {
-          "name": "hotpink60",
-          "attribute": "hotpink60",
-          "type": "string",
-          "default": "\"grey\""
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "outlined",
+          "attribute": "outlined",
+          "type": "boolean",
+          "default": "false"
         }
       ]
     }
