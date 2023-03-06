@@ -3,6 +3,8 @@
 
 Proof of concept of a structure to automate the processes of development, documentation and distribution of webcomponents, designed to serve a Desgin System, or a UI Library which follows the principles of [Component Driven UI](https://www.componentdriven.org/), being built from the bottom up.
 
+[Live demo](https://simple-webcomponents.vercel.app/)
+
 ## **Getting Started**
 
 ```console
@@ -42,5 +44,7 @@ changes.
 
 | Component | Alpha | Beta | Stable |
 | --- | --- | --- | --- |
-| Button | 🟡 | 🔴 | 🔴 |
-| Amount | 🟢 | 🟢 | 🟡 |
+| Amount    | 🟡 | 🔴 | 🔴 |
+| Button    | 🟡 | 🔴 | 🔴 |
+| Input     | 🔴 | 🔴 | 🔴 |
+| Textarea  | 🔴 | 🔴 | 🔴 |

@@ -7,12 +7,15 @@ import { Meta } from '@storybook/blocks';
 To create a new web component using the simple-webcomponents stack, follow these steps:
 
 *   Create a new folder for the component's source code inside **src/components**. The folder name should match the element's tag name, using kebab-case (e.g., **swc-newcomponent**).
-*   Inside the new folder, create a TypeScript file (**swc-newcomponent.ts**) and a Sass file (**swc-newcomponent.scss**). Use the following code as a starting point for the TypeScript file:
+*   Inside the new folder, create a TypeScript file (**swc-newcomponent.ts**), a Sass file (**swc-newcomponent.scss**) and the Storybook file (**SwcNewComponent.stories.ts**).
+
+**swc-newcomponent.ts**
+Use the following code as a starting point for the TypeScript file:
 
 ```typescript
 import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { styles } from './swc-newcomponent.css';
+import { styles } from './swc-amount.css.js';
 
 @customElement('swc-newcomponent')
 export class SwcNewComponent extends LitElement {
@@ -25,29 +28,31 @@ export class SwcNewComponent extends LitElement {
   }
 }
 ```
-
+**swc-newcomponent.scss**:
 Use the following code as a starting point for the Sass file:
 
 ```scss
-div {
-  //...whatever you want..
-}
+@import '../../scss/abstracts/mixins';
+@import '../../scss/abstracts/variables';
 ```
 
-*   Create a new file inside the **src/stories** folder with the name of your component in PascalCase, followed by **.stories.ts** (e.g., **SwcNewComponent.stories.ts**). This file will be used to showcase the examples and variations of the component. Use the following code as a starting point:
+**SwcNewComponent.stories.ts**:
+This file will be used to showcase the examples and variations of the component. Use the following code as a starting point:
+
+Use the following code as a starting point for the Storybook file:
 
 ```typescript
 import { Meta, StoryFn } from '@storybook/web-components';
 import { html } from 'lit-html';
-import { SwcNewComponent } from '../../dist/components/swc-newcomponent/swc-newcomponent';
+import { SwcButton } from './swc-button';
 
 export default {
   title: 'Components/NewComponent',
   component: 'swc-newcomponent', //component tag
 } as Meta;
 
-const Basic: StoryFn<Partial<SwcNewComponent & { label: string }>> = (args) => {
-  return html`<swc-newcomponent>${args.label}</swc-newcomponent>`;
+const Basic: StoryFn<Partial<SwcNewComponent>> = (args) => {
+  return html`<swc-newcomponent label="${args.label || ''}"></swc-newcomponent>`;
 };
 
 export const Default = Basic.bind({});
@@ -62,6 +67,6 @@ Default.args = {
 export { SwcNewComponent } from './components/swc-newcomponent/swc-newcomponent';
 ```
 
-*   Finally, run **yarn dev** to start the development server (if it's not already running). This will build and watch for changes in your files.
+*   Finally, run **npm run dev** and **npm run storybook** (in another terminal) to start the development server. This will build and watch for changes in your files.
 
 By following these steps, you should be able to create a new web component using the simple-webcomponents stack.
