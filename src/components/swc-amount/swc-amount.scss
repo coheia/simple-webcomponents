@@ -1,6 +1,10 @@
 @import '../../scss/abstracts/mixins';
 @import '../../scss/abstracts/variables';
 
+:host {
+  display: inline-flex;
+}
+
 :host([disabled]) {
   .swc-amount__wrapper {
     .counter {

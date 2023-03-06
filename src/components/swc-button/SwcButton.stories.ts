@@ -13,8 +13,19 @@ const Basic: StoryFn<Partial<SwcButton>> = (args) => {
       label="${args.label || nothing}"
       ?disabled=${args.disabled}
       color="${args.color || 'primary'}"
-      ?outlined="${args.outlined}"
-    ></swc-button>`
+      ></swc-button>
+<swc-button
+  outlined
+  ?disabled=${args.disabled}
+  label="${args.label || nothing}"
+  color="${args.color || 'primary'}"
+></swc-button>
+<swc-button
+  disabled
+  label="${args.label || nothing}"
+  color="${args.color || 'primary'}"
+></swc-button>
+  `
 }
 
 export const Primary  = Basic.bind({});
@@ -41,61 +52,14 @@ Success.args = {
   color: 'success'
 };
 
-export const Error  = Basic.bind({});
-Error.args = {
-  label: 'Get simple',
-  color: 'error'
-};
-
 export const Warning  = Basic.bind({});
 Warning.args = {
   label: 'Get simple',
   color: 'warning'
 };
 
-export const Disabled = Basic.bind({});
-Disabled.args = {
+export const Error  = Basic.bind({});
+Error.args = {
   label: 'Get simple',
-  disabled: true,
-};
-
-export const OutlinedPrimary  = Basic.bind({});
-OutlinedPrimary.args = {
-  label: 'Get simple',
-  outlined: true
-};
-
-export const OutlinedSecondary  = Basic.bind({});
-OutlinedSecondary.args = {
-  label: 'Get simple',
-  color: 'secondary',
-  outlined: true
-};
-
-export const OutlinedSuccess  = Basic.bind({});
-OutlinedSuccess.args = {
-  label: 'Get simple',
-  color: 'success',
-  outlined: true
-};
-
-export const OutlinedError  = Basic.bind({});
-OutlinedError.args = {
-  label: 'Get simple',
-  color: 'error',
-  outlined: true
-};
-
-export const OutlinedWarning  = Basic.bind({});
-OutlinedWarning.args = {
-  label: 'Get simple',
-  color: 'warning',
-  outlined: true
-};
-
-export const OutlinedInfo  = Basic.bind({});
-OutlinedInfo.args = {
-  label: 'Get simple',
-  color: 'info',
-  outlined: true
+  color: 'error'
 };

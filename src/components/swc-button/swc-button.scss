@@ -6,9 +6,8 @@
     @include bg-color($color)
 }
 
-:host(*) {
-  width: fit-content;
-  height: fit-content;
+:host {
+  display: inline-flex;
 }
 
 button {
