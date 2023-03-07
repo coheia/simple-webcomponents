@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import config from './icons.config.json' assert { type: "json" };
+import config from './icons.config.js';
 
 function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
