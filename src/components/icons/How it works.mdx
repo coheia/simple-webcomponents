@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Iconography/How it works" />
+
+## How Iconography works
+This features converts SVG files into custom LitElement components with some options such as custom `size`, and `fill` color. It also generates an `Iconography.mdx` file that displays all the generated icons.
+
+The script uses a JSON configuration file, `icons.config.json`, to specify the input and output paths. The configuration file has two properties:
+1.  **entry**: The path to the directory containing the SVG files to be converted.
+2.  **output**: An object with two properties:
+    *   **path**: The path where the generated components will be saved.
+    *   **templateFile**: The path to the template file used to generate the LitElement components.
+
+The generated LitElement components will have a filename prefix `swc-i-`.
+
+### Functionality:
+
+- The script reads all SVG files in the entry directory and its subdirectories.
+- For each SVG file found, it generates a LitElement component file and saves it in the specified output directory.
+- The script replaces width and height values in the SVG content with the size property of the generated LitElement component. If more than 2 fill's value is present, the script replaces it with the `color` property of the generated LitElement component.
+- The script generates an Iconography.mdx file that displays all the generated icons with their respective names.
+
+### Generated Files:
+
+- **swc-i-svg-file-name.ts**: The generated LitElement component file for each SVG files.
+- **exports.ts**: Exports all generated icons. Then this file is included at the index, so you can import any icon as any other component.
+- **Iconography.mdx**: Displays all generated icons with their respective names.
+
+### How to generate new icons:
+1.   Create SVG files in the `./icons` directory.
+2.   Run `npm run icons` to generate the LitElement components in the `./src/components/icons` directory.
+
+To use the element, import the module (`import { SwcIWorld } from '@coheia/simple-webcomponents';`) and add the `<swc-i-world></swc-i-world>` tag to your HTML code. The following properties can be used to customize the icon:
+
+- **size**: sets the width and height of the globe (default value is `16px`).
+- **color**: sets the fill color of the globe (default value is `currentColor`).
+
+### Example usage:
+
+**world** icon
+
+<swc-i-world size="100px"></swc-i-world>
+```HTML
+<swc-i-world size="100px"></swc-i-world>
+```
+
+**bug-insect** icon
+
+<swc-i-bug-insect size="100px"></swc-i-bug-insect>
+```HTML
+<swc-i-bug-insect size="100px"></swc-i-bug-insect>
+```

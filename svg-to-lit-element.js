@@ -23,10 +23,10 @@ const PREFIX = 'swc-i-';
 let exports = '';
 let docs = `import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="Iconography" />
+<Meta title="Iconography/Icons" />
 
-## Iconography
-
+## Icons
+The simple-webcomponents stacks provides you a easy way to create your own fully customized icon library.
 `;
 
 fs.mkdir(config.output.path, {recursive: true}, (err) => {
