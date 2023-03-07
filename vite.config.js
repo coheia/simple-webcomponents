@@ -35,7 +35,7 @@ export default defineConfig(({mode}) => {
           dir: "dist/",
           format: "es",
           entryFileNames: (file) => {
-            if(file.name == 'index'){
+            if(file.name == 'index' || file.name == 'exports'){
               return '[name].js'
             }
 

@@ -1,0 +1,12 @@
+import { html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+
+@customElement('[ELEMENT-NAME]')
+export class [ELEMENT-CLASS-NAME] extends LitElement {
+  @property({type: String}) size = '16px';
+  @property({type: String}) color = 'currentColor';
+
+  render() {
+    return html`[SVG-CONTENT]`;
+  }
+}

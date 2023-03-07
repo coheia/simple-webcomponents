@@ -25,7 +25,8 @@
     "prepublish": "npm run clean:dist && npm run build:css-to-ts && vite build",
     "publish:patch": "npm run prepublish && npm version patch && npm publish",
     "publish:minor": "npm run prepublish && npm version minor && npm publish",
-    "publish:major": "npm run prepublish && npm version major && npm publish"
+    "publish:major": "npm run prepublish && npm version major && npm publish",
+    "icons": "find . \\( -path ./node_modules \\) -prune -o -name '*.svg' -print | xargs node svg-to-lit-element.js"
   },
   "wireit": {
     "dev": {
