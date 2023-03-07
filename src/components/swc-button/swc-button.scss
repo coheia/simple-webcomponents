@@ -11,6 +11,7 @@
 }
 
 button {
+  display: flex;
   cursor: pointer;
   margin: 3px;
   border-radius: $border-radius;
