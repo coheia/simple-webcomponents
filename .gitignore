@@ -6,3 +6,4 @@ dist/
 *.css*
 storybook-static
 .vscode
+src/components/icons
