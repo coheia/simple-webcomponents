@@ -26,7 +26,7 @@ let docs = `import { Canvas, Meta, Story } from '@storybook/addon-docs';
 <Meta title="Iconography/Icons" />
 
 ## Icons
-The simple-webcomponents stacks provides you a easy way to create your own fully customized icon library.
+The simple-webcomponents stacks provides you a easy way to create your own fully customized icon library. This page will be prettier soon...
 `;
 
 fs.mkdir(config.output.path, {recursive: true}, (err) => {
