@@ -21,7 +21,7 @@ function replaceVariables(svgString, matches = undefined) {
 
 const PREFIX = 'swc-i-';
 let exports = '';
-let docs = `import { Canvas, Meta, Story } from '@storybook/addon-docs';
+let docs = `import { Meta } from '@storybook/blocks';
 
 <Meta title="Iconography/Icons" />
 
