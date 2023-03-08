@@ -10,7 +10,7 @@
   "customElements": "custom-elements.json",
   "scripts": {
     "storybook": "storybook dev -p 3002",
-    "icons": "find ./icons \\( -path ./node_modules \\) -prune -o -name '*.svg' -print | xargs node svg-to-lit-element.js",
+    "icons": "rm -rf src/components/icons/swc-i-*/ && find ./icons \\( -path ./node_modules \\) -prune -o -name '*.svg' -print | xargs node svg-to-lit-element.js",
     "dev": "wireit",
     "build": "wireit",
     "build:css-to-ts": "wireit",

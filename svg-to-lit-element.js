@@ -11,10 +11,11 @@ function pascalize (string) {
   return capitalized.join('')
 }
 
-function replaceVariables(svgString, matches = undefined) {
-  let final = svgString.replace(/(width|height)="[^"]+"/g, '$1="${this.size}"');
-  if(typeof matches !== 'undefined' && matches.length < 3) {
-    final = final.replace(/(fill)="[^"]+"/, '$1="${this.color}"');
+function replaceVariables(svgString, matches) {
+  let final = svgString.replace(/(?<!stroke-)(width|height)="[^"]+"/g, '$1="${this.size}"');
+  if(matches <= 2) {
+    final = final.replace(/(fill)="([^"]+|)"/, '$1="${this.color}"');
+    final = final.replace(/(fill)="(?!${this\.color}")[^"]*"/, '$1="${this.color}"');
   }
   return final;
 }
@@ -42,15 +43,22 @@ fs.mkdir(config.output.path, {recursive: true}, (err) => {
       const customElementTag = PREFIX+fileName;
       const customElementTagPascalCase = pascalize(customElementTag);
 
-      const regex = new RegExp(/(fill)="[^"]+"/, 'g');
-      const matches = content.match(regex);
+      const regex = new RegExp(/(fill)="([^"]+|)"/, 'g');
+
+      let matches = content.match(regex);
+
+      if(matches == null){
+        console.warn(`${fileName} do not have any fill attribute. To control color you need to set it inside the .svg file before npm run icons`)
+      }
+
+      matches = matches == null ? 0 : matches.length;
 
       template = template.replace('[ELEMENT-NAME]', `${PREFIX}${fileName}`)
                         .replace('[ELEMENT-CLASS-NAME]', `${customElementTagPascalCase}`)
-                        .replace('[SVG-CONTENT]', replaceVariables(content, matches | undefined));
-      exports += "export {" + customElementTagPascalCase + "} from './"+customElementTag+"/"+customElementTag+"';";
+                        .replace('[SVG-CONTENT]', replaceVariables(content, matches));
+      exports += "export { " + customElementTagPascalCase + " } from './"+customElementTag+"/"+customElementTag+"';";
       docs += ` <div>
-    <${customElementTag} size="70"></${customElementTag}>
+    <${customElementTag} size="100"></${customElementTag}>
     <span>${customElementTag}</span>
   </div>
 `;
