@@ -1,6 +1,6 @@
 {
   "name": "@coheia/simple-webcomponents",
-  "version": "1.0.13",
+  "version": "1.1.0",
   "description": "Develop, document and distribute web components in an automated way.",
   "main": "dist/index.js",
   "type": "module",
