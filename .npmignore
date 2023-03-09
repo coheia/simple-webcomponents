@@ -10,3 +10,7 @@ custom-elements.json
 storybook-static
 .wireit
 .storybook
+icons
+icons.config.js
+icon.lit.template
+svg-to-lit-element.js
