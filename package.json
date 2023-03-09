@@ -38,7 +38,6 @@
     "build": {
       "command": "vite build",
       "dependencies": [
-        "icons",
         "build:css-to-ts",
         "build:elements-type",
         "build:storybook"
