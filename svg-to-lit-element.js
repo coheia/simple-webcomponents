@@ -24,7 +24,7 @@ const PREFIX = 'swc-i-';
 let exports = '';
 let docs = `import { Meta } from '@storybook/blocks';
 
-<Meta title="Iconography/Icons" />
+<Meta title="Iconography/All icons" />
 
 ## Icons
 The simple-webcomponents stacks provides you a easy way to create your own fully customized icon library. This page will be prettier soon...

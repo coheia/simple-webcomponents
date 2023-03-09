@@ -27,6 +27,12 @@ Note that prior knowledge of TypeScript, Sass, Lit, and Storybook is recommended
 *   [lit](https://lit.dev/)
 *   [storybook](https://storybook.js.org/)
 
+## Simple Icons Feature
+
+Simple Icons is a tool that converts SVG files into custom web components with options such as custom size and fill color. It generates LitElement components with a filename prefix "swc-i-" and an `Iconography.mdx` file that displays all the generated icons.
+
+[How it works](https://simple-webcomponents.vercel.app/?path=/docs/iconography-how-it-works--docs)
+
 ## Roadmap
 
 **Alpha** components are in-development and may have many frequent breaking  
