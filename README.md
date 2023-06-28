@@ -5,6 +5,8 @@ Proof of concept of a structure to automate the processes of development, docume
 
 [Live demo](https://simple-webcomponents.vercel.app/)
 
+[NPM Package for distribute](https://www.npmjs.com/package/@coheia/simple-webcomponents)
+
 ## **Getting Started**
 
 ```console
