@@ -3,7 +3,7 @@
     "target": "ES2020",
     "module": "ESNext",
     "declaration": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "outDir": "dist",
     "noUnusedLocals": true,
 		"noUnusedParameters": true,
@@ -21,7 +21,7 @@
     "esModuleInterop": true
   },
   "include": [
-    "src/**/*",
+    "components/**/*",
   ],
-  "exclude": ["node_modules", "dist", "src/stories**/*.stories.ts"]
+  "exclude": ["node_modules", "dist"]
 }
